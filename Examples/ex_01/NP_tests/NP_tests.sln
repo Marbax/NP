@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFView", "..\WFView\WFView.csproj", "{287ED9BD-4B09-4A88-B523-5628256FDD39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAsyncServer", "..\TestAsyncServer\TestAsyncServer.csproj", "{D986985C-0583-4C4B-9CEA-5D913D4D7191}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{287ED9BD-4B09-4A88-B523-5628256FDD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287ED9BD-4B09-4A88-B523-5628256FDD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287ED9BD-4B09-4A88-B523-5628256FDD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287ED9BD-4B09-4A88-B523-5628256FDD39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D986985C-0583-4C4B-9CEA-5D913D4D7191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D986985C-0583-4C4B-9CEA-5D913D4D7191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D986985C-0583-4C4B-9CEA-5D913D4D7191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D986985C-0583-4C4B-9CEA-5D913D4D7191}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC57BB69-FA8E-4CA6-AC66-8AE0F2862B8E}
+	EndGlobalSection
+EndGlobal
