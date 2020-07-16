@@ -6,8 +6,8 @@ namespace MyBestMarvelLib
 {
     public static class MarvelAPIConfig
     {
-        public static string PublicKey => "your_key_from_https://developer.marvel.com/account";
-        private static string _privateKey => "your_key_from_https://developer.marvel.com/account";
+        public static string PublicKey => "8c144a46061b7084f6fed384e7acbe19";
+        private static string _privateKey => "64788cc98a8cc76215142964ecb31f5aa1b80ffe";
         public static long TimeStamp => DateTimeOffset.UtcNow.Second;
         public static string Hash => Md5(TimeStamp, _privateKey, PublicKey);
 

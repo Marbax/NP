@@ -41,3 +41,24 @@
 ---
 
 </p></details>
+
+<details><summary> 3.REST API. </summary><p>
+
+> - До REST'а использовался протокол SOAP .
+> - У Реста нет официального стандарта, официально не задокументировано
+> - Используется в основном для передачи данных json , меньше xml
+> - Postman , Fidler утилиты для теста API
+> - в VS code есть классное расширение Rest Client
+
+---
+
+[rest client use example](Examples/rest_test.http "Examples\rest_test.http")   
+
+[smtp , mail sending example](CW/lesson_03/mailDemo "CW\lesson_03\mailDemo")   
+
+[API , SWAPI , materialskin , WinfForms , custom controls , starwars api using example](HW/lesson_03 "HW\lesson_03")   
+
+---
+
+</p></details>
+
