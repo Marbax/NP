@@ -44,6 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbSSL = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbFiles = new System.Windows.Forms.ComboBox();
+            this.btnAddFile = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.lFiles = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +74,7 @@
             this.tbMailFrom.Name = "tbMailFrom";
             this.tbMailFrom.Size = new System.Drawing.Size(170, 20);
             this.tbMailFrom.TabIndex = 4;
-            this.tbMailFrom.Text = "marbax@ukr.net";
+            this.tbMailFrom.Text = "mail";
             // 
             // lMailFrom
             // 
@@ -104,7 +108,7 @@
             this.tbToMail.Name = "tbToMail";
             this.tbToMail.Size = new System.Drawing.Size(170, 20);
             this.tbToMail.TabIndex = 7;
-            this.tbToMail.Text = "marbax@ukr.net";
+            this.tbToMail.Text = "mail";
             // 
             // tbTheme
             // 
@@ -139,7 +143,7 @@
             this.tbServer.Name = "tbServer";
             this.tbServer.Size = new System.Drawing.Size(170, 20);
             this.tbServer.TabIndex = 12;
-            this.tbServer.Text = "smtp.ukr.net";
+            this.tbServer.Text = "smtp.gmail.com";
             // 
             // lServer
             // 
@@ -162,11 +166,10 @@
             this.nudPort.Size = new System.Drawing.Size(67, 20);
             this.nudPort.TabIndex = 14;
             this.nudPort.Value = new decimal(new int[] {
-            465,
+            25,
             0,
             0,
             0});
-            this.nudPort.ValueChanged += new System.EventHandler(this.nudPort_ValueChanged);
             // 
             // label2
             // 
@@ -198,11 +201,53 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Body";
             // 
-            // Form1
+            // cbFiles
+            // 
+            this.cbFiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFiles.FormattingEnabled = true;
+            this.cbFiles.Location = new System.Drawing.Point(342, 135);
+            this.cbFiles.Name = "cbFiles";
+            this.cbFiles.Size = new System.Drawing.Size(135, 21);
+            this.cbFiles.TabIndex = 18;
+            // 
+            // btnAddFile
+            // 
+            this.btnAddFile.Location = new System.Drawing.Point(342, 106);
+            this.btnAddFile.Name = "btnAddFile";
+            this.btnAddFile.Size = new System.Drawing.Size(62, 23);
+            this.btnAddFile.TabIndex = 19;
+            this.btnAddFile.Text = "Add";
+            this.btnAddFile.UseVisualStyleBackColor = true;
+            this.btnAddFile.Click += new System.EventHandler(this.btnAddFile_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(410, 106);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(68, 23);
+            this.btnRemove.TabIndex = 20;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // lFiles
+            // 
+            this.lFiles.AutoSize = true;
+            this.lFiles.Location = new System.Drawing.Point(393, 88);
+            this.lFiles.Name = "lFiles";
+            this.lFiles.Size = new System.Drawing.Size(28, 13);
+            this.lFiles.TabIndex = 21;
+            this.lFiles.Text = "Files";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 450);
+            this.Controls.Add(this.lFiles);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnAddFile);
+            this.Controls.Add(this.cbFiles);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbSSL);
             this.Controls.Add(this.label2);
@@ -219,7 +264,7 @@
             this.Controls.Add(this.tbMailFrom);
             this.Controls.Add(this.lPass);
             this.Controls.Add(this.tbPass);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).EndInit();
             this.ResumeLayout(false);
@@ -244,6 +289,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbSSL;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbFiles;
+        private System.Windows.Forms.Button btnAddFile;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Label lFiles;
     }
 }
 
