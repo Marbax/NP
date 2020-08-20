@@ -1,0 +1,96 @@
+﻿@page "/weather"
+
+@inject IHttpClientFactory _clientFactory
+
+<h3>Weather Data</h3>
+
+@if (!string.IsNullOrWhiteSpace(errorString))
+{
+    <div class="h2">@errorString</div>
+}
+else if (forecast is null)
+{
+    <div class="h4">Loading...</div>
+}
+else
+{
+    <div class="h4">Sun rise : @forecast.Sun_rise | Sun set: @forecast.Sun_set | Timezone: @forecast.Timezone | City : @forecast.Title</div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Date</th>
+                <th>Weather State</th>
+                <th>Low Temp</th>
+                <th>High Temp</th>
+                <th>Avg Temp</th>
+                <th>Wind Speed</th>
+                <th>Wind Direction</th>
+                <th>Air Pressure</th>
+                <th>Humidity</th>
+                <th>Visibility</th>
+                <th>Predictability</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var w in forecast.Consolidated_weather)
+            {
+                <tr>
+                    <th>@w.Applicable_date</th>
+                    <th>@w.Weather_state_name</th>
+                    <th>@w.Min_temp</th>
+                    <th>@w.Max_temp</th>
+                    <th>@w.The_temp</th>
+                    <th>@w.Wind_speed</th>
+                    <th>@w.Wind_direction</th>
+                    <th>@w.Air_pressure</th>
+                    <th>@w.Humidity</th>
+                    <th>@w.Visibility</th>
+                    <th>@w.Predictability</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+
+    WeatherForecastModel forecast;
+    string errorString;
+
+    ///long try
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    var request = new HttpRequestMessage(HttpMethod.Get, "https://www.metaweather.com/api/location/924938/");
+
+    //    var client = _clientFactory.CreateClient();
+
+    //    HttpResponseMessage response = await client.SendAsync(request);
+
+    //    if (response.IsSuccessStatusCode)
+    //    {
+    //        forecast = await response.Content.ReadFromJsonAsync<WeatherForecastModel>();
+    //        errorString = null;
+    //    }
+    //    else
+    //        errorString = $"Error on getting forecast : [{response.ReasonPhrase}:{response.StatusCode}]";
+    //}
+
+
+    ///short try
+    protected override async Task OnInitializedAsync()
+    {
+        var client = _clientFactory.CreateClient("metaweather");
+
+        try
+        {
+            forecast = await client.GetFromJsonAsync<WeatherForecastModel>("location/924938/");
+            errorString = null;
+
+        }
+        catch (Exception ex)
+        {
+            errorString = $"Error on getting forecast : [{ex.Message}]";
+        }
+    }
+
+}

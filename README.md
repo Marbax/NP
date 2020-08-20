@@ -62,3 +62,18 @@
 
 </p></details>
 
+
+<details><summary> 00.APIs , Blazor , ASP.net. </summary><p>
+
+---
+
+### Newtonsoft.json , WebApi.Client , System.Net.Http.Json , XKCDApi , WeatherForecastApi , WebServer
+
+> Edit -> Paste Special -> Paste Json as Classes
+
+[blazor , api etc example](Examples/HttpClientApiDemoApp "Examples\HttpClientApiDemoApp")   
+
+
+---
+
+</p></details>
